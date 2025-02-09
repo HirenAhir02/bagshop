@@ -32,3 +32,21 @@
 // create owner model sepration of consutions 
 // create mongoose-connection 
 // setup testing in postman  create blank collection
+
+// npm i debug
+// create development.json 
+// npm i config
+
+// ownerRouter ni under 
+//  $env:NODE_ENV = 'development'
+// jo  environment = development hase toj /create route open thase 
+
+// have me environment production set karyu 
+// $env:NODE_ENV='production'
+
+// to have  maru environment production  thay se to config production.json nathi goti saktu 
+
+// have hu fari development environment  set karis 
+//  $env:NODE_ENV = 'development'
+
+// create rout in ownerModel if you any  owner so dont create another owner and only development environment

@@ -1,12 +1,17 @@
 const mongoose = require('mongoose');
+const config  = require('config');
+
+const dbgr = require('debug')("development:mongoose");
+// $env:DEBUG = 'development:*'
+// $env:DEBUG = '' <- blank rakhvi hoy tyare 
 
 mongoose
-.connect(`mongodb://127.0.0.1:27017/bagshop`)
+.connect(`${config.get("MONGODB_URI")}/bagshop`)
 .then(function(){
-    console.log('connected mongodb');
+    dbgr('connected mongodb');
 })
 .catch(function(err){
-    console.log(err);
+    dbgr(err);
 })
 
 module.exports = mongoose.connection;
